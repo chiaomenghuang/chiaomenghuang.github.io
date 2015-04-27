@@ -4,9 +4,17 @@
   </head>
   <body>
     <script type="text/javascript" language="javascript">
+var start = new Date().getTime();
       document.location.assign('googleawx://');
 
       setTimeout(function() {
+var elapsed = new Date().getTime() - start;
+if (elapsed > 1000) {
+  window.close();
+  window.alert("redirect_close");
+} else {
+  window.alert("redirect");
+}
 window.close();
       }, 50);
     </script>
