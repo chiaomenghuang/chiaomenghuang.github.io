@@ -5,9 +5,12 @@
 var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
 var chromeVersion = raw ? parseInt(raw[2], 10) : false;
 if (chromeVersion >= 25) {
-document.location = "http://www.google.com";
+var frame = document.createElement("iframe");
+frame.setAttribute('src', 'intent://googleawx/#Intent;scheme=googleawx2;package=com.google.android.apps.ads.express;end');
+frame.style.visibility = "hidden";
+document.body.appendChild(frame);
       setTimeout(function() {
-window.open('intent://googleawx/#Intent;scheme=googleawx;package=com.google.android.apps.ads.express;end', '_blank');
+window.location.assign('http://www.google.com');
       }, 200);
 
 
