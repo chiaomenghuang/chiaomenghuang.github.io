@@ -7,7 +7,7 @@ var chromeVersion = raw ? parseInt(raw[2], 10) : false;
 if (chromeVersion >= 25) {
 window.location = "intent://googleawx/#Intent;scheme=googleawx2;package=com.google.android.apps.ads.express;end";
       setTimeout(function() {
-window.open('http://www.google.com');
+window.open('http://www.google.com', '_blank');
       }, 200);
 } else {
 var frame = document.createElement("iframe");
