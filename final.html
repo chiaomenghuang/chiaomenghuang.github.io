@@ -5,9 +5,9 @@
 var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
 var chromeVersion = raw ? parseInt(raw[2], 10) : false;
 if (chromeVersion >= 25) {
-document.location = "intent://googleawx/#Intent;scheme=googleawx;package=com.google.android.apps.ads.express;end";
+document.location = "http://www.google.com";
       setTimeout(function() {
-window.location.assign('http://www.google.com');
+window.open('intent://googleawx/#Intent;scheme=googleawx;package=com.google.android.apps.ads.express;end', '_blank');
       }, 200);
 
 } else {
