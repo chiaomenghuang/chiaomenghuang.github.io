@@ -6,15 +6,18 @@ var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
 var chromeVersion = raw ? parseInt(raw[2], 10) : false;
 if (chromeVersion >= 25) {
 window.location = "intent://googleawx/#Intent;scheme=googleawx2;package=com.google.android.apps.ads.express;end";
+      setTimeout(function() {
+window.open('http://www.google.com');
+      }, 200);
 } else {
 var frame = document.createElement("iframe");
 frame.setAttribute('src', 'googleawx2://');
 frame.style.visibility = "hidden";
 document.body.appendChild(frame);
-}
       setTimeout(function() {
         window.location.assign('http://www.google.com');
       }, 200);
+}
 </script>
 </body>
 </html>
